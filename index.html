@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Contagem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #result {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            font-size: 1.5em;
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result">0</div>
+    <div>
+        <div>
+            <button class="button" onclick="handleInput('2')">2</button>
+            <button class="button" onclick="handleInput('3')">3</button>
+            <button class="button" onclick="handleInput('4')">4</button>
+            <button class="button" onclick="handleInput('5')">5</button>
+            <button class="button" onclick="handleInput('6')">6</button>
+            <button class="button" onclick="handleInput('7')">7</button>
+            <button class="button" onclick="handleInput('8')">8</button>
+        </div>
+        <div>
+            <button class="button" onclick="handleInput('9')">9</button>
+            <button class="button" onclick="handleInput('10')">10</button>
+            <button class="button" onclick="handleInput('J')">J</button>
+            <button class="button" onclick="handleInput('Q')">Q</button>
+            <button class="button" onclick="handleInput('K')">K</button>
+            <button class="button" onclick="handleInput('A')">A</button>
+            <button class="button" onclick="deleteLast()">←</button>
+        </div>
+    </div>
+    <table id="historyTable">
+        <thead>
+            <tr>
+                <th>Entrada</th>
+                <th>Contagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As entradas serão adicionadas aqui -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
