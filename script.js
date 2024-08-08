@@ -2,6 +2,8 @@ let count = 0;
 let history = [];
 let hashTable = {};
 
+updateBackgroundColor();
+
 document.addEventListener('keydown', (event) => {
     const key = event.key.toUpperCase();
     if (['2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', 'A'].includes(key)) {
@@ -17,6 +19,17 @@ function handleInput(input) {
     updateHashTable(input, 1);
     updateTable();
     displayCount();
+    updateBackgroundColor(); // Chama a função para atualizar a cor de fundo
+}
+
+function updateBackgroundColor() {
+    if (count <= 5) {
+        document.body.style.backgroundColor = '#FFCCCC'; // vermelho pastel
+    } else if (count <= 22) {
+        document.body.style.backgroundColor = '#FFFFCC'; // amarelo pastel
+    } else {
+        document.body.style.backgroundColor = '#CCFFCC'; // verde pastel
+    }
 }
 
 function updateCount(input) {
